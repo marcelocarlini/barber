@@ -245,6 +245,39 @@
     z-index: 99;
     img{
         width: 40px;
+        transition: transform 04.4s;
+    }
+    img:hover{
+        transform: scale(1.30);
     }
 
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 2px;
+    left: -130px;
+    background-color: $black-normal;
+    color: $white-normal;
+    padding: 2px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:768px){
+    .btn-whatsapp{
+        img{
+            max-width: 50px;
+        }
+    }
 }
